@@ -139,3 +139,7 @@ hr{
 .boxBot{
   background-color: #E0EAF8;
 }
+
+.blink {
+  transition: opacity .2s ease-out;
+}
