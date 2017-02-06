@@ -18,7 +18,6 @@ document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
 var t = setTimeout(startTime, 500);
 
 setGreeting(h);
-
 }
 
 function setGreeting(h){
