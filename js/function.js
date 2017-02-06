@@ -17,14 +17,18 @@ var finalM = checkMin(m);
 document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
 var t = setTimeout(startTime, 500);
 
-if(h > 12 && h < 17){
-  document.getElementById('greeting').innerHTML = "Good Afternoon"
-} else if( h >= 17 && h <=24){
-  document.getElementById('greeting').innerHTML = "Good Evening"
-} else {
-  document.getElementById('greeting').innerHTML = "Good Morning"
+setGreeting(h);
+
 }
 
+function setGreeting(h){
+  if(h > 12 && h < 17){
+    document.getElementById('greeting').innerHTML = "Good Afternoon"
+  } else if( h >= 17 && h <=24){
+    document.getElementById('greeting').innerHTML = "Good Evening"
+  } else {
+    document.getElementById('greeting').innerHTML = "Good Morning"
+  }
 }
 
 function checkMin(i) {
