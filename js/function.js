@@ -11,12 +11,20 @@ var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
 var t = amPm(h);
-m = checkMin(m);
-h = checkHr(h);
+var finalH = checkHr(h);
+var finalM = checkMin(m);
 
-document.getElementById('time').innerHTML =
-  h + ":" + m + " " + t;
-  var t = setTimeout(startTime, 500);
+document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
+var t = setTimeout(startTime, 500);
+
+if(h > 12 && h < 17){
+  document.getElementById('greeting').innerHTML = "Good Afternoon"
+} else if( h >= 17 && h <=24){
+  document.getElementById('greeting').innerHTML = "Good Evening"
+} else {
+  document.getElementById('greeting').innerHTML = "Good Morning"
+}
+
 }
 
 function checkMin(i) {
