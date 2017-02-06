@@ -10,12 +10,14 @@ function startTime() {
 var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-var s = amPm(h);
+var s = today.getSeconds();
+var t = amPm(h);
 m = checkTime(m);
 h = checkTime(h);
+s = checkTime(s);
 
 document.getElementById('time').innerHTML =
-  h + ":" + m + " " + s;
+  h + ":" + m + ":" + s + " " + t;
   var t = setTimeout(startTime, 500);
 }
 
