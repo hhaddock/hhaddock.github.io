@@ -10,16 +10,29 @@ function startTime() {
 var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-var s = today.getSeconds();
+var s = amPm(h);
 m = checkTime(m);
-s = checkTime(s);
+h = checkTime(h);
 
 document.getElementById('time').innerHTML =
-  h + ":" + m;
+  h + ":" + m + " " + s;
   var t = setTimeout(startTime, 500);
 }
 
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+function checkTime(i, s) {
+  if (i < 10) {
+    i = "0" + i
+  }  // add zero in front of numbers < 10
+  if(i > 12 && i <= 24){
+    i = i-12;
+  }
   return i;
+}
+
+function amPm(i){
+  if(i < 12){
+    return "AM";
+  } else {
+    return "PM";
+  }
 }
