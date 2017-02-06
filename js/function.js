@@ -17,7 +17,7 @@ h = checkTime(h);
 s = checkTime(s);
 
 document.getElementById('time').innerHTML =
-  h + ":" + m + ":" + s + " " + t;
+  h + ":" + m + " " + t;
   var t = setTimeout(startTime, 500);
 }
 
