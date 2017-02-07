@@ -21,7 +21,7 @@ setGreeting(h);
 }
 
 function setGreeting(h){
-  if(h > 12 && h < 17){
+  if(h => 12 && h < 17){
     document.getElementById('greeting').innerHTML = "Good Afternoon"
   } else if( h >= 17 && h <=24){
     document.getElementById('greeting').innerHTML = "Good Evening"
