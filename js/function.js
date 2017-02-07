@@ -10,14 +10,13 @@ function startTime() {
 var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
+setGreeting(h);
 var t = amPm(h);
 var finalH = checkHr(h);
 var finalM = checkMin(m);
 
 document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
 var t = setTimeout(startTime, 500);
-
-setGreeting(h);
 }
 
 function setGreeting(h){
