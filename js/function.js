@@ -29,6 +29,8 @@ function setGreeting(h){
   }
 }
 
+//this function checks if the minutes are less than 10
+
 function checkMin(i) {
   if (i < 10) {
     i = "0" + i
