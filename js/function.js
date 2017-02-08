@@ -19,6 +19,16 @@ document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
 var t = setTimeout(startTime, 500);
 }
 
+function setGreeting(h){
+  if(h < 12){
+    document.getElementById('greeting').innerHTML = "Good Morning"
+  } else if( h >= 12 && h <=17){
+    document.getElementById('greeting').innerHTML = "Good Afternoon"
+  } else if(h > 17 && h <= 24){
+    document.getElementById('greeting').innerHTML = "Good Evening"
+  }
+}
+
 function checkMin(i) {
   if (i < 10) {
     i = "0" + i
