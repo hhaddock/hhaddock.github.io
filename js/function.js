@@ -25,7 +25,7 @@ function setGreeting(h){
     document.getElementById('greeting').innerHTML = "Good Afternoon"
   } else if( h >= 17 && h <=24){
     document.getElementById('greeting').innerHTML = "Good Evening"
-  } else {
+  } else if(h < 12){
     document.getElementById('greeting').innerHTML = "Good Morning"
   }
 }
