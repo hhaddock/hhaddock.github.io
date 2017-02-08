@@ -10,20 +10,19 @@ function startTime() {
 var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
+setGreeting(h);
 var t = amPm(h);
 var finalH = checkHr(h);
 var finalM = checkMin(m);
 
 document.getElementById('time').innerHTML = finalH + ":" + finalM + " " + t;
 var t = setTimeout(startTime, 500);
-
-setGreeting(h);
 }
 
 function setGreeting(h){
-  if(h => 12 && h < 17){
-    document.getElementById('greeting').innerHTML = "Good Afternoon"
-  } else if( h >= 17 && h <=24){
+  if(h => 12 && h < 16){
+    document.getElementById('greeting').innerHTML = "Good Evening"
+  } else if( h >= 16 && h <=24){
     document.getElementById('greeting').innerHTML = "Good Evening"
   } else if(h < 12){
     document.getElementById('greeting').innerHTML = "Good Morning"
@@ -33,7 +32,7 @@ function setGreeting(h){
 function checkMin(i) {
   if (i < 10) {
     i = "0" + i
-  }  // add zero in front of numbers < 10
+  }
   return i;
 }
 
